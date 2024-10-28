@@ -73,20 +73,20 @@ function TransitionComponent(props: TransitionProps) {
   );
 }
 
-const StyledTreeItem = styled((props: TreeItemProps) => (
-  <TreeItem {...props} TransitionComponent={TransitionComponent} />
-))(({ theme }) => ({
-  [`& .${treeItemClasses.iconContainer}`]: {
-    "& .close": {
-      opacity: 0.3,
-    },
-  },
-  [`& .${treeItemClasses.group}`]: {
-    marginLeft: 15,
-    paddingLeft: 18,
-    borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
-  },
-}));
+// const StyledTreeItem = styled((props: TreeItemProps) => (
+//   <TreeItem {...props} TransitionComponent={TransitionComponent} />
+// ))(({ theme }) => ({
+//   [`& .${treeItemClasses.iconContainer}`]: {
+//     "& .close": {
+//       opacity: 0.3,
+//     },
+//   },
+//   [`& .${treeItemClasses.group}`]: {
+//     marginLeft: 15,
+//     paddingLeft: 18,
+//     borderLeft: `1px dashed ${alpha(theme.palette.text.primary, 0.4)}`,
+//   },
+// }));
 
 const Treeview = () => {
   return (
@@ -94,7 +94,7 @@ const Treeview = () => {
       {/* breadcrumb */}
       <Breadcrumb title="Treeview" items={BCrumb} />
       {/* end breadcrumb */}
-      <ParentCard title="Treeview">
+      {/* <ParentCard title="Treeview">
         <ChildCard>
           <TreeView
             aria-label="customized"
@@ -120,7 +120,7 @@ const Treeview = () => {
             </StyledTreeItem>
           </TreeView>
         </ChildCard>
-      </ParentCard>
+      </ParentCard> */}
     </PageContainer>
   );
 };
